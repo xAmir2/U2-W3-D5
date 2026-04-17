@@ -26,7 +26,7 @@ const getItems = () => {
                 <img src="${dataObject.imageUrl}" class="card-img-top" alt="graphics card" height="250px">
                 <div class="card-body">
                     <h5 class="card-title">${dataObject.name}</h5>
-                    <p class="card-text">${dataObject.description}</p>
+                    <p class="card-text text-truncate">${dataObject.description}</p>
                     <p class="card-text">Brand ${dataObject.brand}  </br> Price: ${dataObject.price}€</p>
                     <div class="d-flex justify-content-between">
                     <a href="./details.html?id=${dataObject._id}" class="btn btn-primary">More info..</a>

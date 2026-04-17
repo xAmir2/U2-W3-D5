@@ -30,11 +30,20 @@ const moreInfo = () => {
                     <h5 class="card-title">${data.name}</h5>
                     <p class="card-text">${data.description}</p>
                     <p class="card-text">Brand ${data.brand}  </br> Price: ${data.price}€</p>
-                    
+                    <div class="d-flex justify-content-between">
+                    <button class="btn btn-success" id="buy">Buy</button>
+                    <a href="./homepage.html" class="btn btn-secondary">Go Back</a>
+                    </div>
                 </div>
             </div>
         </div>
     `;
+       const buyBtn = document.getElementById("buy");
+
+  buyBtn.addEventListener("click", () => {
+    const modal = new bootstrap.Modal(document.getElementById("buyModal"));
+    modal.show();
+      });
     })
     .catch((err) => {
       console.log("Fetch error", err);
@@ -44,11 +53,11 @@ const moreInfo = () => {
 moreInfo();
 
 const footerDate = function () {
-  const span = document.getElementById('date');
+  const span = document.getElementById("date");
 
   const today = new Date();
 
-  const fullDate = today.toLocaleDateString(); 
+  const fullDate = today.toLocaleDateString();
   span.innerText = fullDate;
 };
 
